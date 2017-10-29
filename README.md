@@ -1,5 +1,5 @@
-# getRatioByViewport
-if you need to find an element's height depending on the viewport width.
+# Get Ratio By Viewport SCSS
+If you need to find an element's height depending on the viewport width. No javascript needed.
 
 The usage:
 In a full responsive website you have to find the height of an element.
