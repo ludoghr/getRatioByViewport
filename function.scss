@@ -1,0 +1,23 @@
+/*** the usage:
+* In a full responsive website you have to calculate the height of an element.
+* You know that this element is 640*800 at a viewport of 1024px.
+***/
+
+.myElement {
+    height: getRatioByViewport(640, 800, 1024);
+}
+
+/**
+* $elW: element width at some viewport
+* $elH: element height at some viewport
+* $viewportW: the viewport width
+**/
+
+@function getRatioByViewport($elW, $elH, $viewportW) {
+    $elRatio: #{$elW / $elH};
+    $elPerc: #{$elW / $viewportW };
+    $vw: 100vw;
+
+    $value: calc( ( #{$vw} * #{$elPerc}) / #{$elRatio});
+    @return $value;
+}
